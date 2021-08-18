@@ -37,11 +37,12 @@ http://www.example.com/product.php?id=10; INSERT INTO users (…)
 ```
 - More Information: https://www.owasp.org/index.php/SQL_Injection
 
+<table>
 <tr>
-    <td>![image](https://user-images.githubusercontent.com/65315090/129912785-f84232fc-a41a-4520-92fa-6c7dfe803e70.png)
-</td>
-    <td>![image](https://user-images.githubusercontent.com/65315090/129912819-124fbe54-d140-4133-8a99-0a3092ba3b15.png)</td>
+    <td> ![image](https://user-images.githubusercontent.com/65315090/129912785-f84232fc-a41a-4520-92fa-6c7dfe803e70.png) </td>
+    <td> ![image](https://user-images.githubusercontent.com/65315090/129912819-124fbe54-d140-4133-8a99-0a3092ba3b15.png) </td>
 </tr>
+</table>
 
 ## Tools for SQL Injection
 
