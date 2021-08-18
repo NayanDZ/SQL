@@ -59,4 +59,13 @@ http://www.example.com/product.php?id=10; INSERT INTO users (…)
 **Step-5:** List column data from columns
   `sqlmap –u http://www.nayan.com/item_id=3 –D tablename –T user_info –C login --dump`
 
+- More Information: https://www.owasp.org/index.php/SQL_Injection
+
+## Prevent SQL injection
+Filter out character like ' " - / \ ; NULL, etc. in all strings from:
+- Input from users
+- Parameters from URL
+- Values from cookie
+
+- Mitigation: https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet
 
