@@ -36,7 +36,7 @@ SELECT * FROM products WHERE id_product=$id_product
 http://www.example.com/product.php?id=10; INSERT INTO users (…)
 ```
 - More Information: https://www.owasp.org/index.php/SQL_Injection
-
+![image](https://user-images.githubusercontent.com/65315090/129912785-f84232fc-a41a-4520-92fa-6c7dfe803e70.png)
 <table>
 <tr>
     <td> ![image](https://user-images.githubusercontent.com/65315090/129912785-f84232fc-a41a-4520-92fa-6c7dfe803e70.png) </td>
