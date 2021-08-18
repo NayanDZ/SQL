@@ -35,10 +35,13 @@ Consider the following SQL query:
 SELECT * FROM products WHERE id_product=$id_product
 http://www.example.com/product.php?id=10; INSERT INTO users (…)
 ```
+- More Information: https://www.owasp.org/index.php/SQL_Injection
 
-![image](https://user-images.githubusercontent.com/65315090/129912785-f84232fc-a41a-4520-92fa-6c7dfe803e70.png)
-
-![image](https://user-images.githubusercontent.com/65315090/129912819-124fbe54-d140-4133-8a99-0a3092ba3b15.png)
+<tr>
+    <td>![image](https://user-images.githubusercontent.com/65315090/129912785-f84232fc-a41a-4520-92fa-6c7dfe803e70.png)
+</td>
+    <td>![image](https://user-images.githubusercontent.com/65315090/129912819-124fbe54-d140-4133-8a99-0a3092ba3b15.png)</td>
+</tr>
 
 ## Tools for SQL Injection
 
@@ -58,8 +61,6 @@ http://www.example.com/product.php?id=10; INSERT INTO users (…)
   
 **Step-5:** List column data from columns
   `sqlmap –u http://www.nayan.com/item_id=3 –D tablename –T user_info –C login --dump`
-
-- More Information: https://www.owasp.org/index.php/SQL_Injection
 
 ## Prevent SQL injection
 Filter out character like ' " - / \ ; NULL, etc. in all strings from:
