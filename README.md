@@ -10,5 +10,29 @@ SQL injection attack consists of insertion of either a partial or complete SQL q
 -	***Out-of-band:*** technique used to retrieve data using a different channel (e.g., make a HTTP connection to send the results to a web server).
 -	***Time delay:*** use database commands (e.g. sleep) to delay answers in conditional queries. It useful when attacker doesn’t have some kind of answer (result, output, or error) from the application
 
+## Standard SQL Injection Testing:
 
+### Example 1 (classical SQL Injection):
+Consider the following SQL query:
+```
+SELECT * FROM Users WHERE Username='$username' AND Password='$password'
+$username = 1' or '1' = '1
+$password = 1' or '1' = '1
+The query will be:
+SELECT * FROM Users WHERE Username='1' OR '1' = '1' AND Password='1' OR '1' = '1' 
+```
+
+### Example 2 (simple SELECT statement):
+Consider the following SQL query: 
+```
+SELECT * FROM products WHERE id_product=$id_product
+http://www.example.com/product.php?id=10
+```
+
+### Example 3 (Stacked queries):
+Consider the following SQL query: 
+```
+SELECT * FROM products WHERE id_product=$id_product
+http://www.example.com/product.php?id=10; INSERT INTO users (…)
+```
 
