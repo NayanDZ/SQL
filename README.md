@@ -69,5 +69,5 @@ Filter out character like ' " - / \ ; NULL, etc. in all strings from:
 - Parameters from URL
 - Values from cookie
 
-- Mitigation: https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet
+Mitigation: https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet
 
