@@ -4,13 +4,16 @@ SQL injection attack consists of insertion of either a partial or complete SQL q
 
 ## SQL Injection Technique
 
-1. **In-band SQLi**(Classic SQLi)
--	***Error-based SQLi:*** this technique forces the database to generate an error, giving the attacker or tester information upon which to refine their injection.
--	***Union-based SQLi:*** can be used when the SQL injection flaw happens in a SELECT statement, making it possible to combine two queries into a single result or result set.
--	***Boolean:*** use Boolean condition(s) to verify whether certain conditions are true or false.
+### **1. In-band SQLi** (Classic SQLi)
+   - ***Error-based SQLi:*** this technique forces the database to generate an error, giving the attacker or tester information upon which to refine their injection.
+   - ***Union-based SQLi:*** can be used when the SQL injection flaw happens in a SELECT statement, making it possible to combine two queries into a single result or result set.
+ 
+### **2. Inferential SQLi** (Blind SQLi)
+-	***Boolean-based:*** use Boolean condition(s) to verify whether certain conditions are true or false.
+-	***Time-based:*** use database commands (e.g. sleep) to delay answers in conditional queries. It useful when attacker doesn’t have some kind of answer (result, output, or error) from the application
 
--	***Out-of-band:*** technique used to retrieve data using a different channel (e.g., make a HTTP connection to send the results to a web server).
--	***Time delay:*** use database commands (e.g. sleep) to delay answers in conditional queries. It useful when attacker doesn’t have some kind of answer (result, output, or error) from the application
+### **2. Out-of-band SQLi**
+***:*** technique used to retrieve data using a different channel (e.g., make a HTTP connection to send the results to a web server).
 
 ## Standard SQL Injection Testing
 
