@@ -9,11 +9,11 @@ SQL injection attack consists of insertion of either a partial or complete SQL q
    - ***Union-based SQLi:*** can be used when the SQL injection flaw happens in a SELECT statement, making it possible to combine two queries into a single result or result set.
  
 ### **2. Inferential SQLi** (Blind SQLi)
--	***Boolean-based:*** use Boolean condition(s) to verify whether certain conditions are true or false.
--	***Time-based:*** use database commands (e.g. sleep) to delay answers in conditional queries. It useful when attacker doesn’t have some kind of answer (result, output, or error) from the application
+   - ***Boolean-based:*** use Boolean condition(s) to verify whether certain conditions are true or false.
+   - ***Time-based:*** use database commands (e.g. sleep) to delay answers in conditional queries. It useful when attacker doesn’t have some kind of answer (result, output, or error) from the application
 
-### **2. Out-of-band SQLi**
-***:*** technique used to retrieve data using a different channel (e.g., make a HTTP connection to send the results to a web server).
+### **2. Out-of-band SQLi**:
+   This technique used to retrieve data using a different channel (e.g., make a HTTP connection to send the results to a web server).
 
 ## Standard SQL Injection Testing
 
