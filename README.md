@@ -82,8 +82,8 @@ http://www.example.com/product.php?id=10; INSERT INTO users (…)
 
 ## Prevent SQL injection
 
-1. Prevented by using `parameterized queries`, instead of string concatenation within the query. (also known as `Prepared statements`)
-2. Filter out special charactercharacter like:**' " - / \ ; NULL,** etc. in all strings from:
+1. Prevented by using ***Parameterized queries***, instead of string concatenation within the query. (also known as ***Prepared statements***)
+2. Filter out special charactercharacter like:`' " - # / \ ; NULL , () @` in all strings from:
    - Input from users
    - Parameters from URL
    - Values from cookie
