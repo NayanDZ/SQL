@@ -90,3 +90,5 @@ http://www.example.com/product.php?id=10; INSERT INTO users (…)
 
 Mitigation: https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet
 
+## Refrence
+- https://portswigger.net/web-security/sql-injection
