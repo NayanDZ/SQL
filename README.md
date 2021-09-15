@@ -2,6 +2,13 @@
 
 SQL injection attack consists of insertion of either a partial or complete SQL query via the data input from the client (Browser) to Application (Server).
 
+## Impact
+
+A successful SQL injection attack can result in:
+- Authentication Bypass 
+- Unauthorized access of sensitive data, like: Personal user information, Passwords, Credit card details, etc.
+- Attacker can obtain a persistent backdoor into an organization's systems.
+
 ## SQL Injection Technique
 
 ### **1. In-band SQLi** (Classic SQLi)
