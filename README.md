@@ -23,6 +23,9 @@ A successful SQL injection attack can result in:
    This technique used to retrieve data using a different channel (e.g., make a HTTP connection to send the results to a web server).
 
 ### Second-order SQL injection (also known as stored SQL injection):
+First-order SQL injection arises where the application takes user input from an HTTP request and,in the course of processing that request, incorporates the input into an SQL query in an unsafe way.
+
+In second-order SQL injection (also known as stored SQL injection), the application takes user input from an HTTP request and stores it for future use. This is usually done by placing the input into a database, but no vulnerability arises at the point where the data is stored. Later, when handling a different HTTP request, the application retrieves the stored data and incorporates it into an SQL query in an unsafe way.
 
 ## Standard SQL Injection Testing
 
@@ -78,10 +81,12 @@ http://www.example.com/product.php?id=10; INSERT INTO users (…)
   `sqlmap –u http://www.nayan.com/item_id=3 –D tablename –T user_info –C login --dump`
 
 ## Prevent SQL injection
-Filter out character like ' " - / \ ; NULL, etc. in all strings from:
-- Input from users
-- Parameters from URL
-- Values from cookie
+
+1. Prevented by using `parameterized queries`, instead of string concatenation within the query. (also known as `Prepared statements`)
+2. Filter out special charactercharacter like:**' " - / \ ; NULL,** etc. in all strings from:
+   - Input from users
+   - Parameters from URL
+   - Values from cookie
 
 Mitigation: https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet
 
