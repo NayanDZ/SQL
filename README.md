@@ -1,6 +1,6 @@
 # SQL Injection
 
-SQL injection attack consists of insertion of either a partial or complete SQL query via the data input from the client (Browser) to Application (Server).
+SQL injection attack consists of insertion of either a partial or complete SQL query via the data input from the client (Browser) to application Server.
 
 ## Impact
 
